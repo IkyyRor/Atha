@@ -1,0 +1,51 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.book {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    perspective: 1000px;
+}
+
+.page {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    overflow: auto;
+}
+
+.left-page {
+    border-right: 2px solid #ddd;
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.right-page {
+    transform-origin: right;
+    transition: transform 0.5s ease;
+}
+
+.book:hover .left-page {
+    transform: rotateY(-30deg);
+}
+
+h1, h2 {
+    color: #ff6b6b;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
